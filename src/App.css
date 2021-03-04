@@ -1,4 +1,4 @@
-h1{
+.h1ForApp{
     text-align: center;
     background-color: #4e7de0;
     color:white;
@@ -32,10 +32,71 @@ h1{
     height: 30px;
 }
 
-.weatherStatusSpan{
+.weatherMainContainer{
+    display:inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+}
+
+.weatherSingleDiv{
     width: 650px;
     height: 250px;
     background-color: #543e8b;
+    border-radius: 10px;
+    margin:10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center; 
+}
+
+.firstLineSingle h3{
+    margin: 0;
+    padding: 22px 0 0 22px;
+}
+
+.firstLineSingle h4{
+    margin: 0;
+    padding: 10px 0 0 22px;
+}
+
+.secondLineSingle h1{
+    font-size: 60px;
+    margin: 0;
+    padding: 10px 0 0 22px;
+}
+
+.thirdLineSingle h3{
+    margin: 0;
+    padding: 10px 0 0px 22px;
+}
+
+.thirdLineSingle h4{
+    margin: 0;
+    padding: 10px 0 22px 22px;
+}
+
+.widaysunny{
+    margin: 10px;
+}
+
+.fourthLineSingle h3{
+    margin: 0;
+    padding: 10px 0px 0px 22px;
+}
+
+.weatherInfoDiv{
+    width: 650px;
+    height: 250px;
+    background-color: white;
+    border-radius: 10px;
+    margin:10px;
+}
+
+.weatherFiveDayDiv{
+    width: 650px;
+    height: 250px;
+    background-color: white;
     border-radius: 10px;
     margin:10px;
 }
