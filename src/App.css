@@ -76,13 +76,19 @@
     padding: 10px 0 22px 22px;
 }
 
-.widaysunny{
+.sunny{
     margin: 10px;
+    color: yellow;
+    position: relative;
+    left: 110px;
 }
 
 .fourthLineSingle h3{
     margin: 0;
-    padding: 10px 0px 0px 22px;
+    /* padding: 10px 0px 0px 22px; */
+    position: relative;
+    left: 138px;
+    width: 43px;
 }
 
 .weatherInfoDiv{

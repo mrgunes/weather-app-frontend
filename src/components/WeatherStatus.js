@@ -17,7 +17,7 @@ export default function WeatherStatus() {
                     <h4>2% chance of rain through 11 PM</h4>
                 </span>
                 <span className='fourthLineSingle'>
-                    <WiDaySunny className='widaysunny' size={80} color='yellow'  />
+                    <WiDaySunny className='widaysunny sunny' size={80} color='yellow'  />
                     <h3>--/2°</h3>
                 </span>
             </div>
@@ -36,12 +36,12 @@ export default function WeatherStatus() {
                         <span className='secondLineInfoSpan'>
                             <WiSunset className='widaysunny set' size={80} color='#000'  />
                             <h4>7:56 pm</h4>
-                        </span>
-                        
+                        </span>   
                     </span>
                 </span>
                 <span className='secondSpanLine'>
-
+                    <span></span>
+                    <span></span>
                 </span>
             </div>
             <div className='weatherFiveDayDiv'>
