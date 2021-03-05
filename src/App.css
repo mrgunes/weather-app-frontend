@@ -103,7 +103,7 @@
     justify-content: center; 
 }
 
-.firstSpanLine, .secondSpanLine{
+.firstSpanLine{
     display:flex;
     justify-content: space-between;
     height: 125px;
@@ -120,7 +120,7 @@
     padding: 10px 0 0 22px;
 }
 
-.firstLineInfo h4{
+.firstLineInfo p{
     margin: 0;
     padding: 0 0 0 22px;
 }
@@ -129,7 +129,7 @@
     display: flex;
 }
 
-.secondLineInfoSpan h4{
+.secondLineInfoSpan p{
     margin: 0;
     position: relative;
     left: 12px;
@@ -138,6 +138,24 @@
 
 .rise, .set{
     margin: 10px 10px 0 0;
+}
+
+.secondSpanLine{
+    display:flex;
+    justify-content:space-around; 
+    flex-flow: column wrap;
+    height: 125px;
+    width: 650px;
+    margin: 0 0 0 6px;
+}
+
+.infoSet{
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    width: 150px;
+    /* margin: 0; */
+    padding: 0px 0 0 22px;
 }
 
 .weatherFiveDayDiv{
