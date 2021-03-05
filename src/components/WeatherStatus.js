@@ -41,20 +41,20 @@ export default function WeatherStatus() {
                 </span>
                 <span className='secondSpanLine'>
                     <div className='infoSet'>
-                        <p><WiThermometer className='termo' size={30} color='#000'  />High/Low</p>
-                        <p>--/2°</p>
+                        <p><WiThermometer className='infoSetIcon' size={30} color='#000'  />High/Low</p>
+                        <p className='infoSetP'>--/2°</p>
                     </div>
                     <div className='infoSet'>
-                        <p><WiHumidity className='humidity' size={30} color='#000'  />Humidity</p>
-                        <p>85%</p>
+                        <p><WiHumidity className='infoSetIcon' size={30} color='#000'  />Humidity</p>
+                        <p className='infoSetPH'>85%</p>
                     </div>
                     <div className='infoSet'>
-                        <p><WiStrongWind className='barometer' size={30} color='#000'  />Wind</p>
-                        <p>2 km/h</p>
+                        <p><WiStrongWind className='infoSetIcon' size={30} color='#000'  />Wind</p>
+                        <p className='infoSetPW'>2 km/h</p>
                     </div>
                     <div className='infoSet'>
-                        <p><WiDust className='dust' size={30} color='#000'  />Visibility</p>
-                        <p>14.4 km</p>
+                        <p><WiDust className='infoSetIcon' size={30} color='#000'  />Visibility</p>
+                        <p className='infoSetP'>14.4 km</p>
                     </div>
                 </span>
             </div>

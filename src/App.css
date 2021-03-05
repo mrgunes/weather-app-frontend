@@ -158,6 +158,26 @@
     padding: 0px 0 0 22px;
 }
 
+.infoSetIcon{
+    position: relative;
+    top: 10px;
+}
+
+.infoSetP{
+    position: relative;
+    left: 35px;
+}
+
+.infoSetPH{
+    position: relative;
+    left: 46px;
+}
+
+.infoSetPW{
+    position: relative;
+    left: 26px;
+}
+
 .weatherFiveDayDiv{
     width: 650px;
     height: 250px;
