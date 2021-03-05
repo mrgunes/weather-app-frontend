@@ -1,5 +1,5 @@
 import React from 'react'
-import {WiDaySunny} from "weather-icons-react"
+import {WiDaySunny,WiSunrise,WiSunset} from "weather-icons-react"
 
 export default function WeatherStatus() {
     return (
@@ -22,7 +22,27 @@ export default function WeatherStatus() {
                 </span>
             </div>
             <div className='weatherInfoDiv'>
+                <span className='firstSpanLine'>
+                    <span className='firstLineInfo'>
+                        <h3>Weather Today in Bothell, WA</h3>
+                        <h1>4°</h1>
+                        <h4>Feels like</h4>
+                    </span>
+                    <span className='secondLineInfo'>
+                        <span className='secondLineInfoSpan'>
+                            <WiSunrise className='widaysunny rise' size={80} color='#000'  />
+                            <h4>6:56 am</h4>
+                        </span>
+                        <span className='secondLineInfoSpan'>
+                            <WiSunset className='widaysunny set' size={80} color='#000'  />
+                            <h4>7:56 pm</h4>
+                        </span>
+                        
+                    </span>
+                </span>
+                <span className='secondSpanLine'>
 
+                </span>
             </div>
             <div className='weatherFiveDayDiv'>
 
