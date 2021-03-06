@@ -1,5 +1,5 @@
 import React from 'react'
-import {WiDaySunny,WiSunrise,WiSunset,WiThermometer,WiHumidity,WiStrongWind,WiDust} from "weather-icons-react"
+import {WiDaySunny,WiSunrise,WiSunset,WiThermometer,WiHumidity,WiStrongWind,WiDust,WiDayCloudy,WiRaindrops} from "weather-icons-react"
 
 export default function WeatherStatus() {
     return (
@@ -59,7 +59,58 @@ export default function WeatherStatus() {
                 </span>
             </div>
             <div className='weatherFiveDayDiv'>
-
+                <h3 className='dailyFiveDay'>Daily Forecast</h3>
+                <span className='fiveDayMainSpan'>
+                    <div>
+                        <span>
+                            <h3>Today</h3>
+                            <h2 className='fiveDayH2'>--</h2>
+                            <p className='fiveDayP'>2°</p>
+                            <WiDayCloudy className='' size={50} color='#000'  />
+                            <p className='fiveDayH2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />8%</p>
+                        </span>
+                    </div>
+                    <div className='border'></div>
+                    <div>
+                        <span>
+                            <h3>Wed 03</h3>
+                            <h2 className='fiveDayH2'>14°</h2>
+                            <p className='fiveDayP'>2°</p>
+                            <WiDayCloudy className='' size={50} color='#000'  />
+                            <p className='fiveDayH2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />70%</p>
+                        </span>
+                    </div>
+                    <div className='border'></div>
+                    <div>
+                        <span>
+                            <h3>Wed 04</h3>
+                            <h2 className='fiveDayH2'>15°</h2>
+                            <p className='fiveDayP'>6°</p>
+                            <WiDayCloudy className='' size={50} color='#000'  />
+                            <p className='fiveDayH2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />19%</p>
+                        </span>
+                    </div>
+                    <div className='border'></div>
+                    <div>
+                        <span>
+                            <h3>Wed 05</h3>
+                            <h2 className='fiveDayH2'>25°</h2>
+                            <p className='fiveDayP'>10°</p>
+                            <WiDayCloudy className='' size={50} color='#000'  />
+                            <p className='fiveDayH2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />90%</p>
+                        </span>
+                    </div>
+                    <div className='border'></div>
+                    <div>
+                        <span>
+                            <h3>Wed 06</h3>
+                            <h2 className='fiveDayH2'>18°</h2>
+                            <p className='fiveDayP'>7°</p>
+                            <WiDayCloudy className='' size={50} color='#000'  />
+                            <p className='fiveDayH2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />0%</p>
+                        </span>
+                    </div>
+                </span>
             </div>
         </div>
     )

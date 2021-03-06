@@ -186,3 +186,33 @@
     border-radius: 10px;
     margin:10px;
 }
+
+.dailyFiveDay{
+    padding: 22px 0 0 22px;
+    margin: 0;
+}
+
+.fiveDayMainSpan{
+    display: flex;
+    justify-content: space-around;
+}
+
+.fiveDayH2{
+    margin: 0;
+}
+
+.fiveDayP{
+    margin: 0 0 10px 0;
+}
+
+.setRainDrop{
+    position: relative;
+    top: 10px;
+}
+
+.border{
+    /* border: 1px solid; */
+    border: 1px solid rgb(12 12 12 / 12%);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
