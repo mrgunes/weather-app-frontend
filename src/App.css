@@ -24,13 +24,10 @@
     text-align: center;
 }
 
-.resizedSearchButton{
+.resizedButton{
     height: 30px; 
 }
 
-.resizedDegreeButton{
-    height: 30px;
-}
 
 .weatherMainContainer{
     display:inline-flex;
@@ -188,7 +185,7 @@
 }
 
 .dailyFiveDay{
-    padding: 22px 0 0 22px;
+    padding: 22px 0 10px 22px;
     margin: 0;
 }
 
@@ -199,10 +196,29 @@
 
 .fiveDayH2{
     margin: 0;
+    position: relative;
+    bottom: 10px;
+    left: 15px;
+    color:dodgerblue
 }
 
 .fiveDayP{
-    margin: 0 0 10px 0;
+    margin: 0 0 5px 0;
+    position: relative;
+    left: 23px;
+    color:dodgerblue
+}
+
+.fiveDayP2{
+    margin: 0;
+    position: relative;
+    bottom: 10px;
+}
+
+.dayCloudy{
+    position: relative;
+    left: 7px;
+    
 }
 
 .setRainDrop{
@@ -212,7 +228,19 @@
 
 .border{
     /* border: 1px solid; */
-    border: 1px solid rgb(12 12 12 / 12%);
+    border: 1px solid rgba(14, 13, 13, 0.12);
     -webkit-background-clip: padding-box; /* for Safari */
     background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
+
+@media screen and (max-width: 768px) {
+    .searchBarInput {
+      width: 48rem;
+    }
+  }
+  
+  @media screen and (max-width: 425px) { 
+    .searchBarInput {
+        width: 43rem;
+      }
+  }

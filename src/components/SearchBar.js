@@ -8,10 +8,10 @@ export default function SearchBar() {
                 <input type="text" className="resizedTextBox"
                     placeholder={"Search City or Zip Code"}
                 />
-                <button className="resizedSearchButton">Search</button>
+                <button className="resizedButton">Search</button>
             </span>
             <span>
-                <button className="resizedDegreeButton">°C/°F</button>
+                <button className="resizedButton">°C/°F</button>
             </span>  
         </div>
     )
