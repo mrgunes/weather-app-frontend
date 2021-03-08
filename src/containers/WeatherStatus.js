@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useContext} from 'react';
+import WeatherContext from '../context/WeatherContext'
 import {WiDaySunny,WiSunrise,WiSunset,WiThermometer,WiHumidity,WiStrongWind,WiDust,WiDayCloudy,WiRaindrops} from "weather-icons-react"
 
 export default function WeatherStatus() {
+    let {city}=useContext(WeatherContext);
+
     return (
         <div className='weatherMainContainer'>
             <div className='weatherSingleDiv'>
@@ -10,7 +13,7 @@ export default function WeatherStatus() {
                     <h4>As of 10:40 PM PST</h4>
                 </span>
                 <span className="secondLineSingle">
-                    <h1>4°</h1>
+                    <h1>{city.cityTemp}°</h1>
                 </span>
                 <span className='thirdLineSingle'>
                     <h3>Cloudy</h3>
