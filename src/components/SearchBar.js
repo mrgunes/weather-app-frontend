@@ -2,22 +2,24 @@ import React, {useState} from 'react';
 import axios from 'axios';
 
 export default function SearchBar() {
-    let [name,setName]=useState('');
+    let [cityName,setCityName]=useState('');
+    let [temp, setTemp]=useState('')
 
     let handleInput=(e)=>{
-        setName(e.target.value)
+        setCityName(e.target.value)
     }
 
     let handleSubmit=()=>{
         let apiKey='27e977f5956015ec7bb12876112d5dd6';
         let config = {
             method: 'get',
-            url: `http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${apiKey}&units=metric`
+            url: `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`
         };
         axios(config)
         .then((response)=>{
         //console.log(JSON.stringify(response.data));
-        console.log(JSON.stringify(response.data.main.temp))
+        setTemp(response.data.main.temp)
+        console.log(temp)
         })
         .catch((error)=>{
         console.log(error);
