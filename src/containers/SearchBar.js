@@ -1,30 +1,34 @@
-import React, {useState} from 'react';
+import React, {useState,useContext} from 'react';
+import WeatherContext from  '../context/WeatherContext'
 import axios from 'axios';
 
 export default function SearchBar() {
-    let [cityName,setCityName]=useState('');
-    let [temp, setTemp]=useState('')
+    let {temp}=useContext(WeatherContext);
+
+    let [name,setName]=useState('');
+    //let [cityTemp,setCityTemp]=useState('')
 
     let handleInput=(e)=>{
-        setCityName(e.target.value)
+        setName(e.target.value)
     }
 
     let handleSubmit=()=>{
         let apiKey='27e977f5956015ec7bb12876112d5dd6';
         let config = {
             method: 'get',
-            url: `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`
+            url: `http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${apiKey}&units=metric`
         };
         axios(config)
         .then((response)=>{
         //console.log(JSON.stringify(response.data));
-        setTemp(response.data.main.temp)
-        console.log(temp)
+        temp(name,response.data.main.temp)
+        //setName('')
         })
         .catch((error)=>{
         console.log(error);
         });
     }
+    //console.log(temp)
 
     return (
         <div className='searchBarInput'>
