@@ -15,7 +15,7 @@ export default function WeatherStatus() {
                     <h4>As of {new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'})}</h4>
                 </span>
                 <span className="secondLineSingle">
-                    <h1>{Math.round(city[0].cityTemp) ? Math.round(city[0].cityTemp): '0'}°</h1>
+                    <h1>{Math.round(city[0].cityTemp) ? Math.round(city[0].cityTemp): '0'}°C</h1>
                 </span>
                 <span className='thirdLineSingle'>
                     <h3>{city[0].cityWeaMain}</h3>
@@ -25,14 +25,14 @@ export default function WeatherStatus() {
                     {/* <WiDaySunny className='sunny' size={80} color='yellow'  /> */}
                     <img className='fourtLineIcon' src={`http://openweathermap.org/img/w/${city[0].cityWeaIcon ? city[0].cityWeaIcon : '02n'}.png`} 
          alt="wthr img" />
-                    <h3>{Math.round(city[0].cityTempMax) ? Math.round(city[0].cityTempMax): '0'}/{Math.round(city[0].cityTempMin) ? Math.round(city[0].cityTempMin) :'0'}°</h3>
+                    <h3>{Math.round(city[0].cityTempMax) ? Math.round(city[0].cityTempMax): '0'}°C/{Math.round(city[0].cityTempMin) ? Math.round(city[0].cityTempMin) :'0'}°C</h3>
                 </span>
             </div>
             <div className='weatherInfoDiv'>
                 <span className='firstSpanLine'>
                     <span className='firstLineInfo'>
                         <h3>Weather Today in Bothell, WA</h3>
-                        <h1>4°</h1>
+                        <h1>4°C</h1>
                         <p>Feels like</p>
                     </span>
                     <span className='secondLineInfo'>
@@ -50,7 +50,7 @@ export default function WeatherStatus() {
                 <span className='secondSpanLine'>
                     <div className='infoSet'>
                         <p><WiThermometer className='infoSetIcon' size={30} color='#000'  />High/Low</p>
-                        <p className='infoSetP'>--/2°</p>
+                        <p className='infoSetP'>--/2°C</p>
                     </div>
                     <div className='infoSet'>
                         <p><WiHumidity className='infoSetIcon' size={30} color='#000'  />Humidity</p>
@@ -73,7 +73,7 @@ export default function WeatherStatus() {
                         <span>
                             <h3>Today</h3>
                             <h2 className='fiveDayH2'>--</h2>
-                            <p className='fiveDayP'>2°</p>
+                            <p className='fiveDayP'>2°C</p>
                             <WiDayCloudy className='dayCloudy' size={50} color='#000'  />
                             <p className='fiveDayP2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />8%</p>
                         </span>
@@ -82,8 +82,8 @@ export default function WeatherStatus() {
                     <div>
                         <span>
                             <h3>Wed 03</h3>
-                            <h2 className='fiveDayH2'>14°</h2>
-                            <p className='fiveDayP'>2°</p>
+                            <h2 className='fiveDayH2'>14°C</h2>
+                            <p className='fiveDayP'>2°C</p>
                             <WiDayCloudy className='dayCloudy' size={50} color='#000'  />
                             <p className='fiveDayP2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />70%</p>
                         </span>
@@ -92,8 +92,8 @@ export default function WeatherStatus() {
                     <div>
                         <span>
                             <h3>Thu 04</h3>
-                            <h2 className='fiveDayH2'>15°</h2>
-                            <p className='fiveDayP'>6°</p>
+                            <h2 className='fiveDayH2'>15°C</h2>
+                            <p className='fiveDayP'>6°C</p>
                             <WiDayCloudy className='dayCloudy' size={50} color='#000'  />
                             <p className='fiveDayP2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />19%</p>
                         </span>
@@ -102,8 +102,8 @@ export default function WeatherStatus() {
                     <div>
                         <span>
                             <h3>Fri 05</h3>
-                            <h2 className='fiveDayH2'>25°</h2>
-                            <p className='fiveDayP'>10°</p>
+                            <h2 className='fiveDayH2'>25°C</h2>
+                            <p className='fiveDayP'>10°C</p>
                             <WiDayCloudy className='dayCloudy' size={50} color='#000'  />
                             <p className='fiveDayP2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />90%</p>
                         </span>
@@ -112,8 +112,8 @@ export default function WeatherStatus() {
                     <div>
                         <span>
                             <h3>Sat 06</h3>
-                            <h2 className='fiveDayH2'>18°</h2>
-                            <p className='fiveDayP'>7°</p>
+                            <h2 className='fiveDayH2'>18°C</h2>
+                            <p className='fiveDayP'>7°C</p>
                             <WiDayCloudy className='dayCloudy' size={50} color='#000'  />
                             <p className='fiveDayP2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />0%</p>
                         </span>
