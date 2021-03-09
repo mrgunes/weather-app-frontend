@@ -5,9 +5,13 @@ import SearchBar from './SearchBar';
 import WeatherStatus from './WeatherStatus'
 
 function App() {
-  let [city, setCity]=useState({})
-  let temp=(cityName,cityTemp)=>{
-    setCity({cityName:cityName, cityTemp:cityTemp})
+  let [city, setCity]=useState([''])
+  let temp=([cityName,cityTemp])=>{
+    setCity([
+      { cityName:cityName, 
+        cityTemp:cityTemp
+      }
+    ])
   }
   console.log(city)
   return (

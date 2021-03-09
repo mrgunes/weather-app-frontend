@@ -9,11 +9,11 @@ export default function WeatherStatus() {
         <div className='weatherMainContainer'>
             <div className='weatherSingleDiv'>
                 <span className='firstLineSingle'>
-                    <h3>Bothell, WA Weather</h3>
-                    <h4>As of 10:40 PM PST</h4>
+                    <h3>{city[0].cityName} Weather</h3>
+                    <h4>As of {new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'})}</h4>
                 </span>
                 <span className="secondLineSingle">
-                    <h1>{city.cityTemp}°</h1>
+                    <h1>{Math.round(city[0].cityTemp) ? Math.round(city[0].cityTemp): '0'}°</h1>
                 </span>
                 <span className='thirdLineSingle'>
                     <h3>Cloudy</h3>

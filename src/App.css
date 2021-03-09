@@ -50,6 +50,7 @@
 .firstLineSingle h3{
     margin: 0;
     padding: 22px 0 0 22px;
+    text-transform:capitalize; /*it makes capitalize first letter*/
 }
 
 .firstLineSingle h4{

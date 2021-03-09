@@ -21,7 +21,8 @@ export default function SearchBar() {
         axios(config)
         .then((response)=>{
         //console.log(JSON.stringify(response.data));
-        temp(name,response.data.main.temp)
+        let data=response.data
+        temp([name,data.main.temp])
         //setName('')
         })
         .catch((error)=>{
