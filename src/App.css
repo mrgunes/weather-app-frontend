@@ -74,13 +74,19 @@
     padding: 10px 0 22px 22px;
 }
 
-.sunny{
+/* .sunny{
     margin: 10px;
     color: yellow;
     position: relative;
     left: 110px;
-}
+} */
 
+.fourtLineIcon{
+    position: relative;
+    left: 114px;
+    width: 100px;
+    height: 100px;
+}
 .fourthLineSingle h3{
     margin: 0;
     /* padding: 10px 0px 0px 22px; */

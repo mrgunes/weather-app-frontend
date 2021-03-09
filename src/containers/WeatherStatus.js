@@ -1,6 +1,8 @@
 import React, {useContext} from 'react';
+import Moment from 'react-moment';
 import WeatherContext from '../context/WeatherContext'
 import {WiDaySunny,WiSunrise,WiSunset,WiThermometer,WiHumidity,WiStrongWind,WiDust,WiDayCloudy,WiRaindrops} from "weather-icons-react"
+import moment from 'moment';
 
 export default function WeatherStatus() {
     let {city}=useContext(WeatherContext);
@@ -16,12 +18,14 @@ export default function WeatherStatus() {
                     <h1>{Math.round(city[0].cityTemp) ? Math.round(city[0].cityTemp): '0'}°</h1>
                 </span>
                 <span className='thirdLineSingle'>
-                    <h3>Cloudy</h3>
+                    <h3>{city[0].cityWeaMain}</h3>
                     <h4>2% chance of rain through 11 PM</h4>
                 </span>
                 <span className='fourthLineSingle'>
-                    <WiDaySunny className='sunny' size={80} color='yellow'  />
-                    <h3>--/2°</h3>
+                    {/* <WiDaySunny className='sunny' size={80} color='yellow'  /> */}
+                    <img className='fourtLineIcon' src={`http://openweathermap.org/img/w/${city[0].cityWeaIcon ? city[0].cityWeaIcon : '02n'}.png`} 
+         alt="wthr img" />
+                    <h3>{Math.round(city[0].cityTempMax) ? Math.round(city[0].cityTempMax): '0'}/{Math.round(city[0].cityTempMin) ? Math.round(city[0].cityTempMin) :'0'}°</h3>
                 </span>
             </div>
             <div className='weatherInfoDiv'>
@@ -34,11 +38,12 @@ export default function WeatherStatus() {
                     <span className='secondLineInfo'>
                         <span className='secondLineInfoSpan'>
                             <WiSunrise className='rise' size={80} color='#000'  />
-                            <p>6:56 am</p>
+                            <p>{moment.unix(city[0].citySunrise).format("hh:mm A")}</p>
                         </span>
                         <span className='secondLineInfoSpan'>
                             <WiSunset className='set' size={80} color='#000'  />
-                            <p>7:56 pm</p>
+                            <p>{moment.unix(city[0].citySunset).format("hh:mm A")}</p>
+                            
                         </span>   
                     </span>
                 </span>

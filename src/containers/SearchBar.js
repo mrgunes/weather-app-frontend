@@ -16,13 +16,14 @@ export default function SearchBar() {
         let apiKey='27e977f5956015ec7bb12876112d5dd6';
         let config = {
             method: 'get',
-            url: `http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${apiKey}&units=metric`
+            url: `http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${apiKey}&units=metric`,
+            // urlAll:`https://api.openweathermap.org/data/2.5/onecall?lat=47.7599&lon=-122.2068&exclude=&appid=27e977f5956015ec7bb12876112d5dd6&units=metric`
         };
         axios(config)
         .then((response)=>{
         //console.log(JSON.stringify(response.data));
         let data=response.data
-        temp([name,data.main.temp])
+        temp([name, data.main.temp, data.weather[0].main, data.main.temp_min, data.main.temp_max, data.weather[0].icon, data.sys.sunrise, data.sys.sunset, data.timezone])
         //setName('')
         })
         .catch((error)=>{
