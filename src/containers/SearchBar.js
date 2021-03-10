@@ -39,7 +39,9 @@ export default function SearchBar() {
         ]))
         .then(([firstResponse, secondResponse]) => {
         console.log(firstResponse.data);
-        console.log(secondResponse.data)
+        //console.log(secondResponse.data)
+        let data=secondResponse.data
+        temp([name, data.current.temp, data.current.weather[0].main, data.daily.temp_min, data.daily.temp_max, data.current.weather[0].icon, data.current.sunrise, data.current.sunset, data.current.dt, data.timezone_offset])
         })
         .catch((err) => {
         console.log(err.message);

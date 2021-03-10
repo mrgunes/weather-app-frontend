@@ -12,7 +12,7 @@ export default function WeatherStatus() {
             <div className='weatherSingleDiv'>
                 <span className='firstLineSingle'>
                     <h3>{city[0].cityName} Weather</h3>
-                    <h4>As of {new Date().toLocaleTimeString(navigator.language, {hour: '2-digit', minute:'2-digit'})}</h4>
+                    <h4>As of {new Date().setSeconds(city[0].cityTime).getTimezoneOffset(city[0].cityTimeZone).format("hh:MM A")}</h4>
                 </span>
                 <span className="secondLineSingle">
                     <h1>{Math.round(city[0].cityTemp) ? Math.round(city[0].cityTemp): '0'}°C</h1>

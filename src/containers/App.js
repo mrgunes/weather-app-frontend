@@ -6,7 +6,7 @@ import WeatherStatus from './WeatherStatus'
 
 function App() {
   let [city, setCity]=useState([''])
-  let temp=([cityName,cityTemp, cityWeaMain,cityTempMin, cityTempMax, cityWeaIcon, citySunrise, citySunset, cityTime])=>{
+  let temp=([cityName,cityTemp, cityWeaMain,cityTempMin, cityTempMax, cityWeaIcon, citySunrise, citySunset, cityTime, cityTimeZone])=>{
     setCity([
       { cityName: cityName, 
         cityTemp: cityTemp,
@@ -16,7 +16,8 @@ function App() {
         cityWeaIcon: cityWeaIcon,
         citySunrise: citySunrise,
         citySunset: citySunset,
-        cityTime: cityTime
+        cityTime: cityTime,
+        cityTimeZone: cityTimeZone
       }
     ])
   }
