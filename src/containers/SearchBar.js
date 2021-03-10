@@ -12,7 +12,7 @@ export default function SearchBar() {
         setName(e.target.value)
     }
 
-    // it is default api. it works only once
+    // it is default api call. it works only once
     useEffect(()=>{
         let apiKey='27e977f5956015ec7bb12876112d5dd6';
         let cityName='Istanbul'
