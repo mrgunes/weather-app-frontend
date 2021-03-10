@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
-import Moment from 'react-moment';
+import moment from 'moment';
+import 'moment-timezone'
 import WeatherContext from '../context/WeatherContext'
 import {WiDaySunny,WiSunrise,WiSunset,WiThermometer,WiHumidity,WiStrongWind,WiDust,WiDayCloudy,WiRaindrops} from "weather-icons-react"
-import moment from 'moment';
 
 export default function WeatherStatus() {
     let {city}=useContext(WeatherContext);
@@ -12,7 +12,7 @@ export default function WeatherStatus() {
             <div className='weatherSingleDiv'>
                 <span className='firstLineSingle'>
                     <h3>{city[0].cityName} Weather</h3>
-                    <h4>As of {new Date().setSeconds(city[0].cityTime).getTimezoneOffset(city[0].cityTimeZone).format("hh:MM A")}</h4>
+                    <h4>As of {moment.unix(city[0].cityTime).tz(`${city[0].cityTimeZone}`).format('hh:mm A Z')}</h4>
                 </span>
                 <span className="secondLineSingle">
                     <h1>{Math.round(city[0].cityTemp) ? Math.round(city[0].cityTemp): '0'}°C</h1>
@@ -38,11 +38,11 @@ export default function WeatherStatus() {
                     <span className='secondLineInfo'>
                         <span className='secondLineInfoSpan'>
                             <WiSunrise className='rise' size={80} color='#000'  />
-                            <p>{moment.unix(city[0].citySunrise).format("hh:mm A")}</p>
+                            <p>{moment.unix(city[0].citySunrise).tz(`${city[0].cityTimeZone}`).format('hh:mm A')}</p>
                         </span>
                         <span className='secondLineInfoSpan'>
                             <WiSunset className='set' size={80} color='#000'  />
-                            <p>{moment.unix(city[0].citySunset).format("hh:mm A")}</p>
+                            <p>{moment.unix(city[0].citySunset).tz(`${city[0].cityTimeZone}`).format('hh:mm A')}</p>
                             
                         </span>   
                     </span>
