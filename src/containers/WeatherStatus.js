@@ -72,7 +72,7 @@ export default function WeatherStatus() {
                     <div>
                         <span>
                             <h3>Today</h3>
-                            <h2 className='fiveDayH2'>--</h2>
+                            <h2 className='fiveDayH2'>20°C</h2>
                             <p className='fiveDayP'>2°C</p>
                             <WiDayCloudy className='dayCloudy' size={50} color='#000'  />
                             <p className='fiveDayP2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />8%</p>
