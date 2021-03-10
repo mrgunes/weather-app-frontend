@@ -1,16 +1,35 @@
-import React, {useState,useContext} from 'react';
+import React, {useState,useContext, useEffect} from 'react';
 import WeatherContext from  '../context/WeatherContext'
 import axios from 'axios';
 
 export default function SearchBar() {
     let {temp}=useContext(WeatherContext);
 
-    let [name,setName]=useState('');
+    let [name,setName]=useState(null);
     //let [cityTemp,setCityTemp]=useState('')
 
     let handleInput=(e)=>{
         setName(e.target.value)
     }
+
+    // it is default api. it works only once
+    useEffect(()=>{
+        let apiKey='27e977f5956015ec7bb12876112d5dd6';
+        let cityName='Istanbul'
+        let config = {
+            method: 'get',
+            url: `https://api.openweathermap.org/data/2.5/onecall?lat=41.0351&lon=28.9833&exclude=&appid=${apiKey}&units=metric`,
+        };
+        axios(config)
+        .then((response)=>{
+        let data=response.data
+        temp([cityName, data.current.temp, data.current.weather[0].main, data.daily[0].temp.max, data.daily[0].temp.min, data.current.weather[0].icon, data.current.sunrise, data.current.sunset, data.current.dt, data.timezone, data.hourly[1].dt, data.hourly[1].pop])
+        //setName('')
+        })
+        .catch((error)=>{
+        console.log(error);
+        });
+    },[])
 
     let handleSubmit=()=>{
         let apiKey='27e977f5956015ec7bb12876112d5dd6';
@@ -41,7 +60,7 @@ export default function SearchBar() {
         console.log(firstResponse.data);
         //console.log(secondResponse.data)
         let data=secondResponse.data
-        temp([firstResponse.data.name, data.current.temp, data.current.weather[0].main, data.daily.temp_min, data.daily.temp_max, data.current.weather[0].icon, data.current.sunrise, data.current.sunset, data.current.dt, data.timezone])
+        temp([firstResponse.data.name, data.current.temp, data.current.weather[0].main, data.daily[0].temp.max, data.daily[0].temp.min, data.current.weather[0].icon, data.current.sunrise, data.current.sunset, data.current.dt, data.timezone, data.hourly[1].dt, data.hourly[1].pop])
         })
         .catch((err) => {
         console.log(err.message);

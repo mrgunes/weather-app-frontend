@@ -15,23 +15,23 @@ export default function WeatherStatus() {
                     <h4>As of {moment.unix(city[0].cityTime).tz(`${city[0].cityTimeZone}`).format('hh:mm A Z')}</h4>
                 </span>
                 <span className="secondLineSingle">
-                    <h1>{Math.round(city[0].cityTemp) ? Math.round(city[0].cityTemp): '0'}°C</h1>
+                    <h1>{Math.round(city[0].cityTemp)}°C</h1>
                 </span>
                 <span className='thirdLineSingle'>
                     <h3>{city[0].cityWeaMain}</h3>
-                    <h4>2% chance of rain through 11 PM</h4>
+                    <h4>{city[0].cityOneHourPre}% chance of rain through {moment.unix(city[0].cityOneHourTime).tz(`${city[0].cityTimeZone}`).format('hh:mm A')}</h4>
                 </span>
                 <span className='fourthLineSingle'>
                     {/* <WiDaySunny className='sunny' size={80} color='yellow'  /> */}
-                    <img className='fourtLineIcon' src={`http://openweathermap.org/img/w/${city[0].cityWeaIcon ? city[0].cityWeaIcon : '02n'}.png`} 
+                    <img className='fourtLineIcon' src={`http://openweathermap.org/img/w/${city[0].cityWeaIcon}.png`} 
          alt="wthr img" />
-                    <h3>{Math.round(city[0].cityTempMax) ? Math.round(city[0].cityTempMax): '0'}°C/{Math.round(city[0].cityTempMin) ? Math.round(city[0].cityTempMin) :'0'}°C</h3>
+                    <h3>{Math.round(city[0].cityTempMax)}°C/{Math.round(city[0].cityTempMin)}°C</h3>
                 </span>
             </div>
             <div className='weatherInfoDiv'>
                 <span className='firstSpanLine'>
                     <span className='firstLineInfo'>
-                        <h3>Weather Today in Bothell, WA</h3>
+                        <h3>Weather Today in {city[0].cityName}</h3>
                         <h1>4°C</h1>
                         <p>Feels like</p>
                     </span>
