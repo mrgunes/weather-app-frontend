@@ -28,6 +28,12 @@
     height: 30px; 
 }
 
+.resizedButton2{
+    height: 30px; 
+    width: 110px;
+    text-transform:capitalize; /*it makes capitalize first letter*/ 
+}
+
 
 .weatherMainContainer{
     display:inline-flex;
