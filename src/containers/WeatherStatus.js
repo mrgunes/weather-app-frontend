@@ -15,7 +15,7 @@ export default function WeatherStatus() {
                     <h4>As of {moment.unix(city[0].cityTime).tz(`${city[0].cityTimeZone}`).format('hh:mm A Z')}</h4>
                 </span>
                 <span className="secondLineSingle">
-                    <h1>{Math.round(city[0].cityTemp)}°C</h1>
+                    <h1>{Math.round(city[0].cityTemp)}°</h1>
                 </span>
                 <span className='thirdLineSingle'>
                     <h3>{city[0].cityWeaMain}</h3>
@@ -25,14 +25,14 @@ export default function WeatherStatus() {
                     {/* <WiDaySunny className='sunny' size={80} color='yellow'  /> */}
                     <img className='fourtLineIcon' src={`http://openweathermap.org/img/w/${city[0].cityWeaIcon}.png`} 
          alt="wthr img" />
-                    <h3>{Math.round(city[0].cityTempMax)}°C/{Math.round(city[0].cityTempMin)}°C</h3>
+                    <h3>{Math.round(city[0].cityTempMax)}°/{Math.round(city[0].cityTempMin)}°</h3>
                 </span>
             </div>
             <div className='weatherInfoDiv'>
                 <span className='firstSpanLine'>
                     <span className='firstLineInfo'>
                         <h3>Weather Today in {city[0].cityName}</h3>
-                        <h1>{Math.round(city[0].cityFeelsLike)}°C</h1>
+                        <h1>{Math.round(city[0].cityFeelsLike)}°</h1>
                         <p>Feels like</p>
                     </span>
                     <span className='secondLineInfo'>
@@ -50,7 +50,7 @@ export default function WeatherStatus() {
                 <span className='secondSpanLine'>
                     <div className='infoSet'>
                         <p><WiThermometer className='infoSetIcon' size={30} color='#000'  />High/Low</p>
-                        <p className='infoSetP'>{Math.round(city[0].cityTempMax)}°C/{Math.round(city[0].cityTempMin)}°C</p>
+                        <p className='infoSetP'>{Math.round(city[0].cityTempMax)}°/{Math.round(city[0].cityTempMin)}°</p>
                     </div>
                     <div className='infoSet'>
                         <p><WiHumidity className='infoSetIcon' size={30} color='#000'  />Humidity</p>
@@ -72,8 +72,8 @@ export default function WeatherStatus() {
                     <div>
                         <span>
                             <h3>Today</h3>
-                            <h2 className='fiveDayH2'>{Math.round(city[0].cityTempMax)}°C</h2>
-                            <p className='fiveDayP'>{Math.round(city[0].cityTempMin)}°C</p>
+                            <h2 className='fiveDayH2'>{Math.round(city[0].cityTempMax)}°</h2>
+                            <p className='fiveDayP'>{Math.round(city[0].cityTempMin)}°</p>
                             {/* <WiDayCloudy className='dayCloudy' size={50} color='#000'  /> */}
                             <img src={`http://openweathermap.org/img/w/${city[0].cityDailyIcon}.png`} alt="wthr img" /> 
                             <p className='fiveDayP2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />{Math.round(city[0].cityDailyPop)}%</p>
@@ -83,8 +83,8 @@ export default function WeatherStatus() {
                     <div>
                         <span>
                             <h3>{moment.unix(city[0].citySeDaTime).tz(`${city[0].cityTimeZone}`).format('ddd Do')}</h3>
-                            <h2 className='fiveDayH2'>{Math.round(city[0].citySeDaMax)}°C</h2>
-                            <p className='fiveDayP'>{Math.round(city[0].citySeDaMin)}°C</p>
+                            <h2 className='fiveDayH2'>{Math.round(city[0].citySeDaMax)}°</h2>
+                            <p className='fiveDayP'>{Math.round(city[0].citySeDaMin)}°</p>
                             {/* <WiDayCloudy className='dayCloudy' size={50} color='#000'  /> */}
                             <img src={`http://openweathermap.org/img/w/${city[0].citySeDaIcon}.png`} alt="wthr img" />
                             <p className='fiveDayP2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />{Math.round(city[0].citySeDaPop)}%</p>
@@ -94,8 +94,8 @@ export default function WeatherStatus() {
                     <div>
                         <span>
                             <h3>{moment.unix(city[0].cityThDaTime).tz(`${city[0].cityTimeZone}`).format('ddd Do')}</h3>
-                            <h2 className='fiveDayH2'>{Math.round(city[0].cityThDaMax)}°C</h2>
-                            <p className='fiveDayP'>{Math.round(city[0].cityThDaMin)}°C</p>
+                            <h2 className='fiveDayH2'>{Math.round(city[0].cityThDaMax)}°</h2>
+                            <p className='fiveDayP'>{Math.round(city[0].cityThDaMin)}°</p>
                             {/* <WiDayCloudy className='dayCloudy' size={50} color='#000'  /> */}
                             <img src={`http://openweathermap.org/img/w/${city[0].cityThDaIcon}.png`} alt="wthr img" />
                             <p className='fiveDayP2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />{Math.round(city[0].cityThDaPop)}%</p>
@@ -105,8 +105,8 @@ export default function WeatherStatus() {
                     <div>
                         <span>
                             <h3>{moment.unix(city[0].cityFoDaTime).tz(`${city[0].cityTimeZone}`).format('ddd Do')}</h3>
-                            <h2 className='fiveDayH2'>{Math.round(city[0].cityFoDaMax)}°C</h2>
-                            <p className='fiveDayP'>{Math.round(city[0].cityFoDaMin)}°C</p>
+                            <h2 className='fiveDayH2'>{Math.round(city[0].cityFoDaMax)}°</h2>
+                            <p className='fiveDayP'>{Math.round(city[0].cityFoDaMin)}°</p>
                             {/* <WiDayCloudy className='dayCloudy' size={50} color='#000'  /> */}
                             <img src={`http://openweathermap.org/img/w/${city[0].cityFoDaIcon}.png`} alt="wthr img" />
                             <p className='fiveDayP2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />{Math.round(city[0].cityFoDaPop)}%</p>
@@ -116,8 +116,8 @@ export default function WeatherStatus() {
                     <div>
                         <span>
                             <h3>{moment.unix(city[0].cityFiDaTime).tz(`${city[0].cityTimeZone}`).format('ddd Do')}</h3>
-                            <h2 className='fiveDayH2'>{Math.round(city[0].cityFiDaMax)}°C</h2>
-                            <p className='fiveDayP'>{Math.round(city[0].cityFiDaMin)}°C</p>
+                            <h2 className='fiveDayH2'>{Math.round(city[0].cityFiDaMax)}°</h2>
+                            <p className='fiveDayP'>{Math.round(city[0].cityFiDaMin)}°</p>
                             {/* <WiDayCloudy className='dayCloudy' size={50} color='#000'  /> */}
                             <img src={`http://openweathermap.org/img/w/${city[0].cityFiDaIcon}.png`} alt="wthr img" />
                             <p className='fiveDayP2'><WiRaindrops className='setRainDrop' size={30} color='#000'  />{Math.round(city[0].cityFiDaPop)}%</p>

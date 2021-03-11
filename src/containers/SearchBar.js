@@ -83,7 +83,11 @@ export default function SearchBar() {
                 <button className="resizedButton" onClick={handleSubmit}>Search</button>
             </span>
             <span>
-                <input type="text" className="resizedButton2" placeholder={'Metric - Imperial'} onChange={handleUnit}/>
+                <select defaultValue={unit} className="resizedButton2" onChange={handleUnit}>
+                    <option value="Metric">Metric</option>
+                    <option value="Imperial">Imperial</option>
+                </select>
+                <button className="resizedButton" onClick={handleSubmit}>Update</button>
             </span>  
         </div>
     )
