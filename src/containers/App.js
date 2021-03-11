@@ -6,7 +6,7 @@ import WeatherStatus from './WeatherStatus'
 
 function App() {
   let [city, setCity]=useState([''])
-  let temp=([cityName,cityTemp, cityWeaMain,cityTempMin, cityTempMax, cityWeaIcon, citySunrise, citySunset, cityTime, cityTimeZone,cityOneHourTime, cityOneHourPre])=>{
+  let temp=([cityName,cityTemp, cityWeaMain,cityTempMin, cityTempMax, cityWeaIcon, citySunrise, citySunset, cityTime, cityTimeZone,cityOneHourTime, cityOneHourPre, cityFeelsLike, cityHumidity, cityWindSpeed, cityVisibility, cityDailyIcon, cityDailyPop, citySeDaTime, citySeDaMax, citySeDaMin, citySeDaIcon, citySeDaPop, cityThDaTime, cityThDaMax, cityThDaMin, cityThDaIcon, cityThDaPop, cityFoDaTime, cityFoDaMax, cityFoDaMin, cityFoDaIcon, cityFoDaPop, cityFiDaTime, cityFiDaMax, cityFiDaMin, cityFiDaIcon, cityFiDaPop])=>{
     setCity([
       { cityName: cityName, 
         cityTemp: cityTemp,
@@ -19,7 +19,33 @@ function App() {
         cityTime: cityTime,
         cityTimeZone: cityTimeZone,
         cityOneHourTime: cityOneHourTime,
-        cityOneHourPre: cityOneHourPre
+        cityOneHourPre: cityOneHourPre,
+        cityFeelsLike: cityFeelsLike,
+        cityHumidity: cityHumidity,
+        cityWindSpeed: cityWindSpeed,
+        cityVisibility: cityVisibility,
+        cityDailyIcon: cityDailyIcon,
+        cityDailyPop: cityDailyPop,
+        citySeDaTime: citySeDaTime,
+        citySeDaMax: citySeDaMax,
+        citySeDaMin: citySeDaMin, 
+        citySeDaIcon: citySeDaIcon,
+        citySeDaPop: citySeDaPop,
+        cityThDaTime: cityThDaTime,
+        cityThDaMax: cityThDaMax,
+        cityThDaMin: cityThDaMin, 
+        cityThDaIcon: cityThDaIcon,
+        cityThDaPop: cityThDaPop,
+        cityFoDaTime: cityFoDaTime,
+        cityFoDaMax: cityFoDaMax,
+        cityFoDaMin: cityFoDaMin, 
+        cityFoDaIcon: cityFoDaIcon,
+        cityFoDaPop: cityFoDaPop,
+        cityFiDaTime: cityFiDaTime,
+        cityFiDaMax: cityFiDaMax,
+        cityFiDaMin: cityFiDaMin, 
+        cityFiDaIcon: cityFiDaIcon,
+        cityFiDaPop: cityFiDaPop,
       }
     ])
   }

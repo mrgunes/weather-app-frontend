@@ -5,7 +5,7 @@ import axios from 'axios';
 export default function SearchBar() {
     let {temp}=useContext(WeatherContext);
 
-    let [name,setName]=useState(null);
+    let [name,setName]=useState();
     //let [cityTemp,setCityTemp]=useState('')
 
     let handleInput=(e)=>{
@@ -23,7 +23,7 @@ export default function SearchBar() {
         axios(config)
         .then((response)=>{
         let data=response.data
-        temp([cityName, data.current.temp, data.current.weather[0].main, data.daily[0].temp.max, data.daily[0].temp.min, data.current.weather[0].icon, data.current.sunrise, data.current.sunset, data.current.dt, data.timezone, data.hourly[1].dt, data.hourly[1].pop])
+        temp([cityName, data.current.temp, data.current.weather[0].main, data.daily[0].temp.max, data.daily[0].temp.min, data.current.weather[0].icon, data.current.sunrise, data.current.sunset, data.current.dt, data.timezone, data.hourly[1].dt, data.hourly[1].pop, data.current.feels_like, data.daily[0].humidity, data.daily[0].wind_speed, data.hourly[0].visibility, data.daily[0].weather[0].icon, data.daily[0].pop, data.daily[1].dt, data.daily[1].temp.max, data.daily[1].temp.min, data.daily[1].weather[0].icon, data.daily[1].pop, data.daily[2].dt, data.daily[2].temp.max, data.daily[2].temp.min, data.daily[2].weather[0].icon, data.daily[2].pop, data.daily[3].dt, data.daily[3].temp.max, data.daily[3].temp.min, data.daily[3].weather[0].icon, data.daily[3].pop, data.daily[4].dt, data.daily[4].temp.max, data.daily[4].temp.min, data.daily[4].weather[0].icon, data.daily[4].pop])
         //setName('')
         })
         .catch((error)=>{
@@ -60,7 +60,7 @@ export default function SearchBar() {
         console.log(firstResponse.data);
         //console.log(secondResponse.data)
         let data=secondResponse.data
-        temp([firstResponse.data.name, data.current.temp, data.current.weather[0].main, data.daily[0].temp.max, data.daily[0].temp.min, data.current.weather[0].icon, data.current.sunrise, data.current.sunset, data.current.dt, data.timezone, data.hourly[1].dt, data.hourly[1].pop])
+        temp([firstResponse.data.name, data.current.temp, data.current.weather[0].main, data.daily[0].temp.max, data.daily[0].temp.min, data.current.weather[0].icon, data.current.sunrise, data.current.sunset, data.current.dt, data.timezone, data.hourly[1].dt, data.hourly[1].pop, data.current.feels_like, data.daily[0].humidity, data.daily[0].wind_speed, data.hourly[0].visibility, data.daily[0].weather[0].icon, data.daily[0].pop, data.daily[1].dt, data.daily[1].temp.max, data.daily[1].temp.min, data.daily[1].weather[0].icon, data.daily[1].pop, data.daily[2].dt, data.daily[2].temp.max, data.daily[2].temp.min, data.daily[2].weather[0].icon, data.daily[2].pop, data.daily[3].dt, data.daily[3].temp.max, data.daily[3].temp.min, data.daily[3].weather[0].icon, data.daily[3].pop, data.daily[4].dt, data.daily[4].temp.max, data.daily[4].temp.min, data.daily[4].weather[0].icon, data.daily[4].pop])
         })
         .catch((err) => {
         console.log(err.message);
