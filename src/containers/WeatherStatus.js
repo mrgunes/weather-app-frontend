@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import moment from 'moment';
 import 'moment-timezone'
 import WeatherContext from '../context/WeatherContext'
-import {WiSunrise,WiSunset,WiThermometer,WiHumidity,WiStrongWind,WiDust,WiRaindrops} from "weather-icons-react"
+import {WiSunrise,WiSunset,WiThermometer,WiHumidity,WiBarometer,WiDust,WiRaindrops} from "weather-icons-react"
 
 export default function WeatherStatus() {
     let {city}=useContext(WeatherContext);
@@ -56,8 +56,8 @@ export default function WeatherStatus() {
                         <p className='infoSetPH'>{city[0].cityHumidity}%</p>
                     </div>
                     <div className='infoSet'>
-                        <p><WiStrongWind className='infoSetIcon' size={30} color='#000'  />Wind</p>
-                        <p className='infoSetPW'>{city[0].cityWindSpeed} m/sec</p>
+                        <p><WiBarometer className='infoSetIcon' size={30} color='#000'  />Pressure</p>
+                        <p className='infoSetPW'>{city[0].cityWindPre} hPa</p>
                     </div>
                     <div className='infoSet'>
                         <p><WiDust className='infoSetIcon' size={30} color='#000'  />Visibility</p>

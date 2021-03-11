@@ -6,7 +6,7 @@ import WeatherStatus from './WeatherStatus'
 
 function App() {
   let [city, setCity]=useState([''])
-  let temp=([cityName,cityTemp, cityWeaMain,cityTempMin, cityTempMax, cityWeaIcon, citySunrise, citySunset, cityTime, cityTimeZone,cityOneHourTime, cityOneHourPre, cityFeelsLike, cityHumidity, cityWindSpeed, cityVisibility, cityDailyIcon, cityDailyPop, citySeDaTime, citySeDaMax, citySeDaMin, citySeDaIcon, citySeDaPop, cityThDaTime, cityThDaMax, cityThDaMin, cityThDaIcon, cityThDaPop, cityFoDaTime, cityFoDaMax, cityFoDaMin, cityFoDaIcon, cityFoDaPop, cityFiDaTime, cityFiDaMax, cityFiDaMin, cityFiDaIcon, cityFiDaPop])=>{
+  let temp=([cityName,cityTemp, cityWeaMain,cityTempMin, cityTempMax, cityWeaIcon, citySunrise, citySunset, cityTime, cityTimeZone,cityOneHourTime, cityOneHourPre, cityFeelsLike, cityHumidity, cityWindPre, cityVisibility, cityDailyIcon, cityDailyPop, citySeDaTime, citySeDaMax, citySeDaMin, citySeDaIcon, citySeDaPop, cityThDaTime, cityThDaMax, cityThDaMin, cityThDaIcon, cityThDaPop, cityFoDaTime, cityFoDaMax, cityFoDaMin, cityFoDaIcon, cityFoDaPop, cityFiDaTime, cityFiDaMax, cityFiDaMin, cityFiDaIcon, cityFiDaPop])=>{
     setCity([
       { cityName: cityName, 
         cityTemp: cityTemp,
@@ -22,7 +22,7 @@ function App() {
         cityOneHourPre: cityOneHourPre,
         cityFeelsLike: cityFeelsLike,
         cityHumidity: cityHumidity,
-        cityWindSpeed: cityWindSpeed,
+        cityWindPre: cityWindPre,
         cityVisibility: cityVisibility,
         cityDailyIcon: cityDailyIcon,
         cityDailyPop: cityDailyPop,
