@@ -22,8 +22,7 @@ export default function WeatherStatus() {
                     <h4>{Math.round(city[0].cityOneHourPre)}% chance of rain through {moment.unix(city[0].cityOneHourTime).tz(`${city[0].cityTimeZone}`).format('hh A')}</h4>
                 </span>
                 <span className='fourthLineSingle'>
-                    <img className='fourtLineIcon' src={`http://openweathermap.org/img/w/${city[0].cityWeaIcon}.png`} 
-         alt="wthr img" />
+                    <img className='fourtLineIcon' src={`http://openweathermap.org/img/w/${city[0].cityWeaIcon}.png`} alt="wthr img" />
                     <h3>{Math.round(city[0].cityTempMax)}°/{Math.round(city[0].cityTempMin)}°</h3>
                 </span>
             </div>
