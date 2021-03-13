@@ -37,23 +37,6 @@ export default function SearchBar() {
     //let unitName=unit;
     
     let handleSubmit=()=>{
-        // let config = {
-        //     method: 'get',
-        //     url: `http://api.openweathermap.org/data/2.5/weather?q=${name}&appid=${apiKey}&units=metric`,
-        //     // urlAll:`https://api.openweathermap.org/data/2.5/onecall?lat=47.7599&lon=-122.2068&exclude=&appid=27e977f5956015ec7bb12876112d5dd6&units=metric`
-        // };
-        // axios(config)
-        // .then((response)=>{
-        // //console.log(JSON.stringify(response.data));
-        // let data=response.data
-        // temp([name, data.main.temp, data.weather[0].main, data.main.temp_min, data.main.temp_max, data.weather[0].icon, data.sys.sunrise, data.sys.sunset, data.timezone])
-        // //setName('')
-        // })
-        // .catch((error)=>{
-        // console.log(error);
-        // });
-
-        //with below line first get coordinates from first url and use second url.
         axios.get(`http://localhost:8000/${name}/${unit}`) 
         .then((response) => {
         console.log(response.data);
@@ -71,7 +54,7 @@ export default function SearchBar() {
             <span className="weatherApp">The Weather App</span>
             <span>
                 <input type="text" className="resizedTextBox"
-                    placeholder={"Search City or Zip Code"} id="id" name="q" onChange={handleInput}
+                    placeholder={"Search City or Zip Code"} name="setCity" onChange={handleInput}
                 />
                 <button className="resizedButton" onClick={handleSubmit}>Search</button>
             </span>
